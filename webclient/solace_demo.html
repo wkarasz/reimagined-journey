@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Solace Demo</title>
+<style>
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body bgcolor=#2f2f2f style="color:white">
+<h1>Submit Order and Track Status</h1>
+<table>
+<tr><td>
+	<p>Submit data (REST synchronous request/reply)</p>
+	<iframe src="submitOrder.html" name="iframe_a" height="600" width="400" title="Iframe Example"></iframe>
+	<p><a href="submitOrder.html" target="iframe_a">reset</a></p>
+  </td>
+  <td>
+	<p>Track status (Web Socket asynchronous pub/sub)</p>
+       	<iframe src="QueueConsumer.html" name="iframe_b" height="600" width="600" title="Iframe Example"></iframe>
+        <p><a href="QueueConsumer.html" target="iframe_b">reset</a></p>
+  </td>
+  <td>
+	<p><u>Synchronous response</u> - provide an immediate response to the end user (or system) that the order has been received and has successfully been presisted for further action. </p>
+	<p><u>Asynchronous response</u> - invoke backend services to process the order, involving integration with other systems, processes, people, or things. </p>
+</tr>
+</table>
+</body>
+</html>
